@@ -42,6 +42,7 @@ pipeline{
            stage('MetricCheck'){
               
               steps{
+		  echo 'Code Coverage'
                   sh 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
               }
               
